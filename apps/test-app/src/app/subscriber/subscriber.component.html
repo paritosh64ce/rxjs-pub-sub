@@ -1,0 +1,27 @@
+<mat-card>
+  <div layout="row" style="height: 50px;">
+    <div style="float: left">
+      <mat-icon *ngIf="btnGroup.value == 1">signal_wifi_4_bar</mat-icon>
+      <mat-icon *ngIf="btnGroup.value != 1">signal_wifi_off</mat-icon>
+    </div>
+    <div flex>
+      <mat-chip-list>
+        <mat-chip [color]="myColor" *ngIf="myNumber != undefined" selected>
+          {{myNumber}}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+
+  <mat-button-toggle-group #btnGroup="matButtonToggleGroup" [value]="0">
+    <mat-button-toggle value="1" (click)="subscribeEvent()"
+      [disabled]="btnGroup.value == 1">
+      Subscribe
+    </mat-button-toggle>
+    <mat-button-toggle value="0" (click)="unsubscribeEvent()"
+      *ngIf="isSubscribedFirstTime"
+      [disabled]="btnGroup.value == 0">
+      Unsubscribe
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-card>

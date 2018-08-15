@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-icon>wifi_tethering</mat-icon>
+  <form>
+    <mat-form-field>
+      <input matInput readonly name="eventName" [(ngModel)]="eventName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput readonly name="random" [ngModel]="random">
+    </mat-form-field>
+    <button mat-raised-button color="accent"
+      (click)="generateRandom()">Generate New &amp; Publish
+    </button>
+  </form>
+</mat-card>

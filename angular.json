@@ -2,13 +2,146 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "test-app": {
+      "root": "apps/test-app/",
+      "sourceRoot": "apps/test-app/src",
+      "projectType": "application",
+      "prefix": "ngx-pub-sub",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/test-app",
+            "index": "apps/test-app/src/index.html",
+            "main": "apps/test-app/src/main.ts",
+            "polyfills": "apps/test-app/src/polyfills.ts",
+            "tsConfig": "apps/test-app/tsconfig.app.json",
+            "assets": [
+              "apps/test-app/src/favicon.ico",
+              "apps/test-app/src/assets"
+            ],
+            "styles": [
+              "apps/test-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/test-app/src/environments/environment.ts",
+                  "with": "apps/test-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "test-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "test-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "test-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/test-app/src/test.ts",
+            "polyfills": "apps/test-app/src/polyfills.ts",
+            "tsConfig": "apps/test-app/tsconfig.spec.json",
+            "karmaConfig": "apps/test-app/karma.conf.js",
+            "styles": [
+              "apps/test-app/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/test-app/src/favicon.ico",
+              "apps/test-app/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/test-app/tsconfig.app.json",
+              "apps/test-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-pub-sub": {
+      "root": "libs/ngx-pub-sub",
+      "sourceRoot": "libs/ngx-pub-sub/src",
+      "projectType": "library",
+      "prefix": "libs/ngx-pub-sub",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json",
+            "project": "libs/ngx-pub-sub/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/ngx-pub-sub/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ngx-pub-sub/src/test.ts",
+            "tsConfig": "libs/ngx-pub-sub/tsconfig.spec.json",
+            "karmaConfig": "libs/ngx-pub-sub/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-pub-sub/tsconfig.lib.json",
+              "libs/ngx-pub-sub/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/schematics"
-    
-  }
+  },
+  "defaultProject": "ngx-pub-sub"
 }

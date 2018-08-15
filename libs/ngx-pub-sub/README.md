@@ -67,7 +67,7 @@ After having the source code, run `ng serve` for a dev server. Navigate to `http
 
 Below is how the demo application looks like.
 
-![Demo Screenshot](./apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
+![Demo Screenshot](../../apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
 
 ## Running unit tests
 
