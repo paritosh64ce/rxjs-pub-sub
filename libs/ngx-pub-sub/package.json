@@ -1,6 +1,6 @@
 {
   "name": "@pscoped/ngx-pub-sub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Paritosh Patel",
   "contributors": [
@@ -16,7 +16,8 @@
   "homepage": "https://github.com/paritosh64ce/ngx-pub-sub",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "rxjs": "^6.0.0"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
     "publish",
     "subscribe",
     "pub-sub",
-    "broadcast"
+    "broadcast",
+    "communication",
+    "component communication"
   ]
 }

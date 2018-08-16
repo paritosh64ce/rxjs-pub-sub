@@ -1,6 +1,6 @@
 {
   "name": "ngx-pub-sub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Paritosh Patel",
   "contributors": [
@@ -22,7 +22,9 @@
     "publish",
     "subscribe",
     "pub-sub",
-    "broadcast"
+    "broadcast",
+    "communication",
+    "component communication"
   ],
   "scripts": {
     "ng": "ng",

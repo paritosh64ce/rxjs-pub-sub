@@ -12,20 +12,14 @@ export class SubscriberComponent {
   subscription: Subscription;
   myNumber: number;
   myColor: string;
-  isSubscribedFirstTime: boolean;
-  @ViewChild('btnGroup') btnGroup;
+  isSubscribed = false;
 
   colors = ['primary', 'accent', 'warn'];
   colorCounter = 0;
 
-  constructor(private pubSub: NgxPubSubService) {
-    this.isSubscribedFirstTime = false;    
-  }
+  constructor(private pubSub: NgxPubSubService) { }
 
   subscribeEvent() {
-    this.isSubscribedFirstTime = true;
-    // dirty check has to be put coz check in template is not working
-    if (this.btnGroup.value === 1) return;
 
     console.log('subscribed');
     this.subscription = this.pubSub.getEventObservable('randomNumber')
@@ -34,13 +28,12 @@ export class SubscriberComponent {
         this.myColor = this.colors[this.colorCounter % this.colors.length];
         this.myNumber = data;
       });
+    this.isSubscribed = true;
   }
 
   unsubscribeEvent() {
-    // dirty check has to be put coz check in template is not working
-    if (this.btnGroup.value === 0) return;
-
     console.log('unsubscribed');
     this.subscription.unsubscribe();
+    this.isSubscribed = false;
   }
 }

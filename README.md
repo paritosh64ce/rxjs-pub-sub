@@ -1,8 +1,12 @@
 # NgxPubSub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
+Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string).
 
-## Event publish-subscribe mechnism for Angular
+[![npm](https://img.shields.io/npm/v/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
+[![npm](https://img.shields.io/npm/dt/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
+[![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
+
+## How to use
 
 Install the module.
 
@@ -67,9 +71,15 @@ After having the source code, run `ng serve` for a dev server. Navigate to `http
 
 Below is how the demo application looks like.
 
-![Demo Screenshot](./apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
+![Demo Screenshot](https://github.com/paritosh64ce/ngx-pub-sub/tree/master/apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
 
 ## Running unit tests
 
 1. Run `npm run test:lib` to execute the `ngx-pub-sub` library test cases.
 2. Run `npm run coverage:lib` to generate the code-coverage report.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
+
+## License
+
+MIT @ [paritosh64ce](https://github.com/paritosh64ce)

@@ -1,8 +1,8 @@
 <mat-card>
   <div layout="row" style="height: 50px;">
     <div style="float: left">
-      <mat-icon *ngIf="btnGroup.value == 1">signal_wifi_4_bar</mat-icon>
-      <mat-icon *ngIf="btnGroup.value != 1">signal_wifi_off</mat-icon>
+      <mat-icon *ngIf="isSubscribed">signal_wifi_4_bar</mat-icon>
+      <mat-icon *ngIf="!isSubscribed">signal_wifi_off</mat-icon>
     </div>
     <div flex>
       <mat-chip-list>
@@ -13,15 +13,23 @@
     </div>
   </div>
 
-  <mat-button-toggle-group #btnGroup="matButtonToggleGroup" [value]="0">
-    <mat-button-toggle value="1" (click)="subscribeEvent()"
-      [disabled]="btnGroup.value == 1">
+  <!-- have to use the buttons in a strange way as
+    click was getting fired even for disabled toggle button
+   -->
+  <mat-button-toggle-group *ngIf="!isSubscribed">
+    <button mat-button (click)="subscribeEvent()">
       Subscribe
-    </mat-button-toggle>
-    <mat-button-toggle value="0" (click)="unsubscribeEvent()"
-      *ngIf="isSubscribedFirstTime"
-      [disabled]="btnGroup.value == 0">
+    </button>
+    <mat-button-toggle disabled>
       Unsubscribe
     </mat-button-toggle>
+  </mat-button-toggle-group>
+  <mat-button-toggle-group *ngIf="isSubscribed">
+    <mat-button-toggle disabled>
+      Subscribe
+    </mat-button-toggle>
+    <button mat-button (click)="unsubscribeEvent()">
+      Unsubscribe
+    </button>
   </mat-button-toggle-group>
 </mat-card>
