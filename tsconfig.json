@@ -18,9 +18,6 @@
     "paths": {
       "@ngx-pub-sub/ngx-pub-sub": [
         "libs/ngx-pub-sub/src/index.ts"
-      ],
-      "@ngx-pub-sub/ngx-pub-sub": [
-        "libs/ngx-pub-sub/src/index.ts"
       ]
     }
   },
