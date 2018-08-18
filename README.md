@@ -2,11 +2,11 @@
 
 Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string).
 
+[![Build Status](https://travis-ci.com/paritosh64ce/ngx-pub-sub.svg?branch=master)](https://travis-ci.com/paritosh64ce/ngx-pub-sub)
 [![npm](https://img.shields.io/npm/v/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
 
-[![Build Status](https://secure.travis-ci.org/paritosh64ce/ngx-pub-sub.png?branch=master)](https://travis-ci.com/paritosh64ce/ngx-pub-sube)
 
 [![Dependency Status](https://img.shields.io/david/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg)
 [![devDependency Status](https://img.shields.io/david/dev/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg#info=devDependencies)
@@ -77,7 +77,7 @@ After having the source code, run `ng serve` for a dev server. Navigate to `http
 
 Below is how the demo application looks like.
 
-![Demo Screenshot](https://github.com/paritosh64ce/ngx-pub-sub/tree/master/apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
+![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img.JPG "ngx-pub-sub demo screenshot")
 
 ## Running unit tests
 

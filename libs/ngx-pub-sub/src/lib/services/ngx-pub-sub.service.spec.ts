@@ -61,11 +61,9 @@ describe('NgxPubSubService', () => {
     (service: NgxPubSubService) => {
       const myObservable = service.getEventObservable('newEvent');
       expect((<any>myObservable.source).isStopped).toBe(false);
-      console.log(myObservable);
 
       service.completeEvent('newEvent');
       expect((<any>myObservable.source).isStopped).toBe(true);
-      console.log(myObservable);
     }
   ));
   

@@ -8,7 +8,3 @@ addons:
 before_script:
   - "sudo chown root /opt/google/chrome/chrome-sandbox"
   - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
-scripts:
-  - npm install codecov -g
-after_success:
-  - codecov
