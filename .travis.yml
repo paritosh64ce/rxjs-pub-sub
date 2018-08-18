@@ -1,11 +1,13 @@
+sudo: required
+dist: trusty
 language: node_js
 node_js:
  - "node"
 addons:
   chrome: stable
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
 scripts:
   - npm install codecov -g
 after_success:
