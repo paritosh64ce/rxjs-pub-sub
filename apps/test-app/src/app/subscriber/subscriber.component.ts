@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit, Input } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
 
@@ -9,10 +9,11 @@ import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
 })
 export class SubscriberComponent {
 
+  @Input() eventName: string;
+
   subscription: Subscription;
-  myNumber: number;
-  myColor: string;
   isSubscribed = false;
+  list: any[] = [];
 
   colors = ['primary', 'accent', 'warn'];
   colorCounter = 0;
@@ -22,11 +23,15 @@ export class SubscriberComponent {
   subscribeEvent() {
 
     console.log('subscribed');
-    this.subscription = this.pubSub.getEventObservable('randomNumber')
-      .subscribe(data => {
+    this.subscription = this.pubSub.subscribe(this.eventName,
+      data => {
         this.colorCounter++;
-        this.myColor = this.colors[this.colorCounter % this.colors.length];
-        this.myNumber = data;
+        // append at the top
+        this.list.unshift({
+          myColor: this.colors[this.colorCounter % this.colors.length],
+          myNumber: data
+        })
+        console.log(data);
       });
     this.isSubscribed = true;
   }
@@ -34,6 +39,7 @@ export class SubscriberComponent {
   unsubscribeEvent() {
     console.log('unsubscribed');
     this.subscription.unsubscribe();
+    this.list = [];
     this.isSubscribed = false;
   }
 }

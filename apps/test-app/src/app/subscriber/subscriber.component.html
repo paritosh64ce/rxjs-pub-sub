@@ -1,13 +1,13 @@
 <mat-card>
-  <div layout="row" style="height: 50px;">
+  <div layout="row" style="min-height: 50px;">
     <div style="float: left">
       <mat-icon *ngIf="isSubscribed">signal_wifi_4_bar</mat-icon>
       <mat-icon *ngIf="!isSubscribed">signal_wifi_off</mat-icon>
     </div>
     <div flex>
       <mat-chip-list>
-        <mat-chip [color]="myColor" *ngIf="myNumber != undefined" selected>
-          {{myNumber}}
+        <mat-chip *ngFor="let data of list" [color]="data.myColor" selected>
+          {{data.myNumber}}
         </mat-chip>
       </mat-chip-list>
     </div>
@@ -18,7 +18,7 @@
    -->
   <mat-button-toggle-group *ngIf="!isSubscribed">
     <button mat-button (click)="subscribeEvent()">
-      Subscribe
+      Subscribe to <b>{{eventName}}</b>
     </button>
     <mat-button-toggle disabled>
       Unsubscribe
@@ -26,7 +26,7 @@
   </mat-button-toggle-group>
   <mat-button-toggle-group *ngIf="isSubscribed">
     <mat-button-toggle disabled>
-      Subscribe
+      Subscribed to <b>{{eventName}}</b>
     </mat-button-toggle>
     <button mat-button (click)="unsubscribeEvent()">
       Unsubscribe

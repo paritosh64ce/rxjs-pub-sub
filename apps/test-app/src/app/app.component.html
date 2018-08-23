@@ -3,10 +3,8 @@
   <h1>Welcome to {{title}}!</h1>
 </div>
 
-<h2>This is an Angular CLI app built with Nrwl Nx!</h2>
-
 <ngx-pub-sub-publisher></ngx-pub-sub-publisher>
 
-<ngx-pub-sub-subscriber></ngx-pub-sub-subscriber>
+<ngx-pub-sub-subscriber [eventName]="historicalEvent"></ngx-pub-sub-subscriber>
 
-<ngx-pub-sub-subscriber></ngx-pub-sub-subscriber>
+<ngx-pub-sub-subscriber [eventName]="latestEvent"></ngx-pub-sub-subscriber>

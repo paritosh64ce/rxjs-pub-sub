@@ -1,9 +1,9 @@
 <mat-card>
-    <mat-icon>wifi_tethering</mat-icon>
+    <mat-icon>wifi_tethering</mat-icon> {{historicalEvent}}, {{latestEvent}}
   <form>
-    <mat-form-field>
+    <!-- <mat-form-field>
       <input matInput readonly name="eventName" [(ngModel)]="eventName">
-    </mat-form-field>
+    </mat-form-field> -->
     <mat-form-field>
       <input matInput readonly name="random" [ngModel]="random">
     </mat-form-field>
@@ -11,4 +11,11 @@
       (click)="generateRandom()">Generate New &amp; Publish
     </button>
   </form>
+  <div flex>
+    <mat-chip-list>
+      <mat-chip *ngFor="let data of list" [color]="data.myColor" selected>
+        {{data.myNumber}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
 </mat-card>
