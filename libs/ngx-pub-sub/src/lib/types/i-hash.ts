@@ -4,10 +4,8 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { SubjectType } from './subject-type.enum';
 
 export interface IHash {
-  [key: string]: IObservableReferences;
-}
-
-interface IObservableReferences {
-  type: SubjectType;
-  ref: Subject<any> | BehaviorSubject<any> | ReplaySubject<any>
+  [key: string]: {
+    type: SubjectType;
+    ref: Subject<any> | BehaviorSubject<any> | ReplaySubject<any>
+  };
 }
