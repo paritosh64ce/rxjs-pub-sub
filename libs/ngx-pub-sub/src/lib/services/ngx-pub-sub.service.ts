@@ -22,7 +22,7 @@ export class NgxPubSubService implements OnDestroy {
     this.validateEventName(eventName);
     this.createSubjectIfNotExist(eventName);
 
-    this.publishNext(eventName, data);
+    this.publishNext(eventName, SubjectType.Subject, data);
   }
   
   subscribe(eventName: string, next?: (value: any) => void, error?: (error: any) => any, complete?: () => void): Subscription {
@@ -38,13 +38,13 @@ export class NgxPubSubService implements OnDestroy {
    */
   getEventObservable(eventName: string): Observable<any> {
     this.validateEventName(eventName);
-    // type and name check
-    this.checkEventType(eventName, SubjectType.Subject);
+    // subject will be created if the provided eventName is not registered
+    this.createSubjectIfNotExist(eventName);
     
     return this.eventObservableMapping[eventName].ref.asObservable();
   }
 
-  registerEventWithLatestValue(name: string, defaultValue: any) {
+  registerEventWithLastValue(name: string, defaultValue: any) {
     this.validateEventName(name);
     // type and name check
     this.checkEventType(name, SubjectType.BehaviorSubject, true);
@@ -71,7 +71,7 @@ export class NgxPubSubService implements OnDestroy {
     this.publishNext(eventName, SubjectType.BehaviorSubject, data);
   }
 
-  publishWithHistory(eventName: string, data: any) {
+  publishWithHistory(eventName: string, data?: any) {
     this.validateEventName(eventName);
     this.publishNext(eventName, SubjectType.ReplaySubject, data);
   }
@@ -102,9 +102,9 @@ export class NgxPubSubService implements OnDestroy {
     let errorMessage;
     if(!object && shouldNotExist) { return; }
     if(!object) {
-      errorMessage = `Event doesn't exist of type: ${type.toString()} or it has been completed`;
+      errorMessage = `Event doesn't exist of type: ${SubjectType[type]} or it has been completed`;
     } else if(object.type !== type) {
-      errorMessage = `Event exists with other type: ${object.type}. Expected type: ${type.toString()}`;
+      errorMessage = `Event exists with other type: ${SubjectType[object.type]}. Expected type: ${SubjectType[type]}`;
     }
     if(shouldNotExist && object.type === type) {
       errorMessage = `Event already registerd with the same type. Don't register a second time`;

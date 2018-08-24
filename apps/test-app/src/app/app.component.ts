@@ -8,11 +8,12 @@ import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
 })
 export class AppComponent {
   title = 'ngx-pub-sub Demo App';
+  normalEvent = 'randomNormal';
   latestEvent = 'randomLast';
   historicalEvent = 'randomHistory';
 
   constructor(pubsubSvc: NgxPubSubService) {
-    pubsubSvc.registerEventWithHistory(this.historicalEvent, 4);
-    pubsubSvc.registerEventWithLatestValue(this.latestEvent, undefined);
+    pubsubSvc.registerEventWithHistory(this.historicalEvent, 6);
+    pubsubSvc.registerEventWithLastValue(this.latestEvent, undefined);
   }
 }

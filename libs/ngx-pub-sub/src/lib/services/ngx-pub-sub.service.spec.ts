@@ -16,6 +16,38 @@ describe('NgxPubSubService', () => {
     }
   ));
 
+  it('should throw error if name is not provided', (
+    inject([NgxPubSubService], (service: NgxPubSubService) => {
+      expect(() => service.getEventObservable('')).toThrowError();
+      let eventName = null;
+      expect(() => service.getEventObservable(eventName)).toThrowError();
+      eventName = undefined;
+      expect(() => service.getEventObservable(eventName)).toThrowError();
+      
+      expect(() => service.registerEventWithHistory(eventName)).toThrowError();
+      expect(() => service.registerEventWithLastValue(eventName, 'someValue')).toThrowError();
+
+      expect(() => service.publishEvent(eventName)).toThrowError();
+      expect(() => service.subscribe(eventName)).toThrowError();
+      expect(() => service.publishWithHistory(eventName)).toThrowError();
+      expect(() => service.publishWithLast(eventName)).toThrowError();
+    })));
+
+  it('should throw error if same name is registered with other event type', (
+    inject([NgxPubSubService], (service: NgxPubSubService) => {
+      
+      service.registerEventWithHistory('history');
+      expect(() => service.registerEventWithLastValue('history', 'someValue')).toThrowError();
+      
+      service.registerEventWithLastValue('last', 'someValue');
+      expect(() => service.registerEventWithHistory('history')).toThrowError();
+      
+      service.getEventObservable('normalEvent');
+      expect(() => service.registerEventWithLastValue('normalEvent', 'someValue')).toThrowError();
+      expect(() => service.registerEventWithHistory('normalEvent')).toThrowError();
+    })));
+
+  //#region older-depricated tests
   it('should create/return Obervable when event name is provided', inject(
     [NgxPubSubService],
     (service: NgxPubSubService) => {
@@ -55,6 +87,7 @@ describe('NgxPubSubService', () => {
       service.publishEvent('newEvent', complexObject);
     }
   ));
+  //#endregion
   
   it('should stop the observable while completing it', inject(
     [NgxPubSubService],

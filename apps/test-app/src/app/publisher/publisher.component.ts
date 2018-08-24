@@ -8,6 +8,7 @@ import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
 })
 export class PublisherComponent implements OnInit {
 
+  normalEvent = 'randomNormal';
   historicalEvent = 'randomHistory';
   latestEvent = 'randomLast';
   random: number;
@@ -28,6 +29,7 @@ export class PublisherComponent implements OnInit {
       myColor: this.colors[this.colorCounter % this.colors.length],
       myNumber: this.random
     });
+    this.pubsub.publishEvent(this.normalEvent, this.random);
     this.pubsub.publishWithHistory(this.historicalEvent, this.random);
     this.pubsub.publishWithLast(this.latestEvent, this.random);
   }
