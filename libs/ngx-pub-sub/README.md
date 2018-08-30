@@ -43,12 +43,13 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 
     ```typescript
     export class AppComponent {
-    latestEvent = 'randomLast';
-    historicalEvent = 'randomHistory';
+        latestEvent = 'randomLast';
+        historicalEvent = 'randomHistory';
 
-    constructor(pubsubSvc: NgxPubSubService) {
-        pubsubSvc.registerEventWithHistory(this.historicalEvent, 6);
-        pubsubSvc.registerEventWithLastValue(this.latestEvent, undefined);
+        constructor(pubsubSvc: NgxPubSubService) {
+            pubsubSvc.registerEventWithHistory(this.historicalEvent, 6);
+            pubsubSvc.registerEventWithLastValue(this.latestEvent, undefined);
+        }
     }
     ```
 
@@ -67,13 +68,12 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
         constructor(private pubSub: NgxPubSubService) { }
 
         ngOnInit() {
-            this.subscription1 = this.pubSub.getEventObservable('randomNormal')
-                .subscribe(data => this.myNumber1 = data);
-
-            this.subscription2 = this.pubSub.getEventObservable('randomHistory')
-                .subscribe(data => this.myNumber2 = data);
-            this.subscription3 = this.pubSub.getEventObservable('randomLast')
-                .subscribe(data => this.myNumber3 = data);
+            this.subscription1 = this.pubSub.subscribe('randomNormal',
+                                    data => this.myNumber1 = data);
+            this.subscription2 = this.pubSub.subscribe('randomHistory',
+                                    data => this.myNumber2 = data);
+            this.subscription3 = this.pubSub.subscribe('randomLast',
+                                    data => this.myNumber3 = data);
         }
 
         ngOnDestroy() {
@@ -114,7 +114,7 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 2. Once event name is registered for a type (to support either normal, last value support or historical value support), the same name cannot be used to publish/subscribe for another type unless it is completed by someone.
 3. Normal events need not to be registered. If event is not found at the time of publishing or subscribing, the same will be registered as a normal event.
 4. You can register the events anywhere in your code, however, we recommand to have it at one place only,
-i.e. inside the root component of your application, like what you see in [app.component.ts]()
+i.e. inside the root component of your application, like what you see in [app.component.ts](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/apps/test-app/src/app/app.component.ts)
 
 If an event having name 'randomHistory' is registered to support historical values, the same event name cannot be used to register or publish event with other type (i.e. last value support or normal event) unless it is completed programmatically.
 
@@ -124,10 +124,10 @@ If an event having name 'randomHistory' is registered to support historical valu
 ### Development server
 
 ```console
-> git clone https://github.com/paritosh64ce/ngx-pub-sub.git
-> cd ngx-pub-sub
-> npm i
-> ng serve
+git clone https://github.com/paritosh64ce/ngx-pub-sub.git
+cd ngx-pub-sub
+npm i
+ng serve
 ```
 
 This will start the server for the demo application.
@@ -152,17 +152,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## TODO:
 1. Coverage integration with CI
-2. Dev dependencies update
 
 
 
-## ChangeLog
+## Change Log
 
->1.0.0 - 1.0.3:  
->Basic functionality and README file updates
+> 1.0.0 - 1.0.3:  
+> Basic functionality and README file updates
 
->2.0.0
->Now subscribers can have last or historical values for the event published based on the type the event is registered with.
+> 2.0.0
+> Now subscribers can have last or historical values for the event published based on the type the event is registered with.
+
+> 2.0.1
+> Dev-dependencies and README file updates
+
+### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 
 ## License
 
