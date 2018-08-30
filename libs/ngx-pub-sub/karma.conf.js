@@ -11,6 +11,13 @@ module.exports = function(config) {
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
       dir: join(__dirname, '../../coverage/libs/ngx-pub-sub')
+    },
+    coverageReporter: {
+      dir : '../../coverage/',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcov' }
+        ]
     }
   });
 };
