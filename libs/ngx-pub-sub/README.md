@@ -13,6 +13,8 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![devDependency Status](https://img.shields.io/david/dev/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg#info=devDependencies)
 [![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
+## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
+
 ## How to use
 
 1. Install the module.
@@ -39,7 +41,7 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
     export class AppModule {}
     ```
 
-3. Registed the events if you'd like to support events with last or historical values.
+3. Register the events if you'd like to support events with last or historical values.
 
     ```typescript
     export class AppComponent {
