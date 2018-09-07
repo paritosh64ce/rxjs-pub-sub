@@ -1,7 +1,7 @@
 # NgxPubSub
 
 
-Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string).
+Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers. 
 
 [![Build Status](https://travis-ci.com/paritosh64ce/ngx-pub-sub.svg?branch=master)](https://travis-ci.com/paritosh64ce/ngx-pub-sub)
 [![npm](https://img.shields.io/npm/v/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
@@ -14,6 +14,25 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
 ## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
+
+## What makes this package special?
+
+1. Simplicity
+    - Publish you data
+    ```typescript
+    service.publishEvent('eventName', data)
+    ```
+    - Subscribe to your event
+    ```typescript
+    service.subscribe('eventName', (data: any) => { /* your callback */ })
+    ```
+
+2. Unique feature
+    - This service also supports historical values even for new subscribers.
+    ```typescript
+    service.publishWithHistory('eventName', data)   /* new subscribers can have historical values */
+    service.publishWithLast('eventName', data)      /* new subscribers can have last published value */
+    ```
 
 ## How to use
 
@@ -165,7 +184,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 2.0.0
 > Now subscribers can have last or historical values for the event published based on the type the event is registered with.
 
-> 2.0.1
+> 2.0.1 - 2.0.2
 > Dev-dependencies and README file updates
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
