@@ -1,5 +1,4 @@
-# NgxPubSub
-
+# 🔔 NgxPubSub 🔔
 
 Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers. 
 
@@ -184,10 +183,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 2.0.0
 > Now subscribers can have last or historical values for the event published based on the type the event is registered with.
 
-> 2.0.1 - 2.0.2
+> 2.0.1 - 2.0.3
 > Dev-dependencies and README file updates
 
+> 3.0.0
+> Dependencies updated with Angular 8
+
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
+
+### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/ngx-pub-sub/issues)!
 
 ## License
 
