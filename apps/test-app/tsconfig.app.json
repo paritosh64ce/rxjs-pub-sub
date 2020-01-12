@@ -1,15 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/test-app",
+    "outDir": "../../dist/out-tsc",
     "types": []
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts",
-    "karma.conf.ts"
-  ],
-  "include": [
-    "**/*.ts"
-  ]
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["**/*.ts"],
+  "exclude": ["src/test.ts", "**/*.spec.ts"]
 }
