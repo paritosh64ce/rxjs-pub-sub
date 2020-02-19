@@ -6,6 +6,7 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![npm](https://img.shields.io/npm/v/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
+[![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
 
 
 [![Dependency Status](https://img.shields.io/david/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg)
