@@ -192,6 +192,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 
+
+[![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/paritosh64patel)
+## Sponsors
+Motivate, Become a sponsor and get your logo on README with a link to your site. [[Become a sponsor](https://simplifyingtechblog.wordpress.com/contact/)]
+
 ### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/ngx-pub-sub/issues)!
 
 ## License
