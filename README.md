@@ -139,6 +139,10 @@ i.e. inside the root component of your application, like what you see in [app.co
 
 If an event having name 'randomHistory' is registered to support historical values, the same event name cannot be used to register or publish event with other type (i.e. last value support or normal event) unless it is completed programmatically.
 
+### Below is how the demo application looks like.
+
+![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
+
 ## Developing and Contributing
 > The repository also comes with the demo application. Check the Github repo link.
 
@@ -154,10 +158,6 @@ ng serve
 This will start the server for the demo application.
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Below is how the demo application looks like.
-
-![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
 
 
 ### Running unit tests
@@ -192,10 +192,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 
-
+### Support
 [![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/paritosh64patel)
-## Sponsors
-Motivate, Become a sponsor and get your logo on README with a link to your site. [[Become a sponsor](https://simplifyingtechblog.wordpress.com/contact/)]
+
+Motivate, Become a sponsor and get your logo on README with a link to your site. [Become a sponsor](https://simplifyingtechblog.wordpress.com/contact/)
 
 ### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/ngx-pub-sub/issues)!
 
