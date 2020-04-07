@@ -34,7 +34,8 @@ export class NgxPubSubService implements OnDestroy {
   }
 
   /**
-   * @@deprecated this method is deprecated since 2.0.0. Use subscribe instead.
+   * Use this method to get the Observable associated with the event.
+   * Useful when you would like to apply additional rxjs operators like debounceTime
    */
   getEventObservable(eventName: string): Observable<any> {
     this.validateEventName(eventName);
