@@ -1,4 +1,3 @@
-
 # 🔔 NgxPubSub 🔔
 
 Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers. 
@@ -7,6 +6,7 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![npm](https://img.shields.io/npm/v/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/ngx-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/ngx-pub-sub)
 [![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
+[![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
 
 
 [![Dependency Status](https://img.shields.io/david/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg)
@@ -139,6 +139,10 @@ i.e. inside the root component of your application, like what you see in [app.co
 
 If an event having name 'randomHistory' is registered to support historical values, the same event name cannot be used to register or publish event with other type (i.e. last value support or normal event) unless it is completed programmatically.
 
+### Below is how the demo application looks like.
+
+![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
+
 ## Developing and Contributing
 > The repository also comes with the demo application. Check the Github repo link.
 
@@ -154,10 +158,6 @@ ng serve
 This will start the server for the demo application.
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Below is how the demo application looks like.
-
-![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
 
 
 ### Running unit tests
@@ -190,7 +190,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 3.0.0
 > Dependencies updated with Angular 8
 
+> 3.0.1
+> Removed deprecation attribute for `getEventObservable`, added funding to `package.json`
+
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
+
+### Support
+[![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/paritosh64patel)
+
+Motivate, Become a sponsor and get your logo on README with a link to your site. [Become a sponsor](https://simplifyingtechblog.wordpress.com/contact/)
 
 ### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/ngx-pub-sub/issues)!
 

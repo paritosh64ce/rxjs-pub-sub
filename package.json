@@ -1,7 +1,7 @@
 {
   "name": "ngx-pub-sub",
   "description": "Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event. This library also supports historical published values for the subscribers.",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "license": "MIT",
   "author": "Paritosh Patel",
   "contributors": [
