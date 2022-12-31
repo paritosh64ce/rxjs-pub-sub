@@ -1,7 +1,7 @@
 {
   "name": "@pscoped/ngx-pub-sub",
   "description": "Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event. This library also supports historical published values for the subscribers.",
-  "version": "3.0.2",
+  "version": "5.0.0-beta1",
   "license": "MIT",
   "author": "Paritosh Patel",
   "contributors": [
@@ -20,9 +20,12 @@
   },
   "homepage": "https://pscoped-ngx-pub-sub-demo.stackblitz.io/",
   "peerDependencies": {
-    "@angular/common": "^8.2.11",
-    "@angular/core": "^8.2.11",
-    "rxjs": "^6.0.0"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "rxjs": "^7.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   },
   "repository": {
     "type": "git",

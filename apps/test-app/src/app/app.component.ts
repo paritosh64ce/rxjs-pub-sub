@@ -1,7 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
+import { Component } from '@angular/core';
+import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ngx-pub-sub-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

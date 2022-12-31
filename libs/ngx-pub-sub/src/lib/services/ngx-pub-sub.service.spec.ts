@@ -19,9 +19,9 @@ describe('NgxPubSubService', () => {
   it('should throw error if name is not provided', (
     inject([NgxPubSubService], (service: NgxPubSubService) => {
       expect(() => service.getEventObservable('')).toThrowError();
-      let eventName = null;
+      let eventName = '';
       expect(() => service.getEventObservable(eventName)).toThrowError();
-      eventName = undefined;
+      eventName = '';
       expect(() => service.getEventObservable(eventName)).toThrowError();
       
       expect(() => service.registerEventWithHistory(eventName)).toThrowError();
@@ -53,8 +53,8 @@ describe('NgxPubSubService', () => {
     (service: NgxPubSubService) => {
       const myObservable = service.getEventObservable('newEvent');
 
-      expect(myObservable).not.toBe(undefined);
-      expect(myObservable).not.toBe(null);
+      expect(myObservable).not.toBeUndefined();
+      expect(myObservable).not.toBeNull();
       expect(typeof(myObservable.subscribe)).toBe('function');
     }
   ));
