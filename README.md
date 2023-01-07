@@ -193,7 +193,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 3.0.1 - 3.0.2
 > Removed deprecation attribute for `getEventObservable`, added funding to `package.json`
 
-> 5.0.0
+> 5.0.0-beta1, 5.0.0-beta2
 > Compatible with Angular 15
 
 
