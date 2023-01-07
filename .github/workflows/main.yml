@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main
+      - ng15
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+  
+    steps:
+    - name: npm install
+      run: npm install
+    - name: Test
+      run: npm run test
+    - name: Lint
+      run: npm run lint
+    - name: build
+      run: npm run pack:lib
