@@ -7,6 +7,9 @@
     "inlineSources": true,
     "types": []
   },
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
+  },
   "exclude": ["src/**/*.spec.ts", "jest.config.ts", "src/**/*.test.ts"],
   "include": ["src/**/*.ts"]
 }
