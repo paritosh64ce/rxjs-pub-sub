@@ -190,8 +190,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 3.0.0
 > Dependencies updated with Angular 8
 
-> 3.0.1
+> 3.0.1 - 3.0.2
 > Removed deprecation attribute for `getEventObservable`, added funding to `package.json`
+
+> 5.0.0
+> Compatible with Angular 15
+
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 

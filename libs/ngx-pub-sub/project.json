@@ -1,0 +1,44 @@
+{
+  "name": "ngx-pub-sub",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/ngx-pub-sub/src",
+  "prefix": "ngx",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/ngx-pub-sub"],
+      "options": {
+        "project": "libs/ngx-pub-sub/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json"
+        },
+        "development": {
+          "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "libs/ngx-pub-sub/tsconfig.spec.json",
+        "karmaConfig": "libs/ngx-pub-sub/karma.conf.js",
+        "polyfills": ["zone.js", "zone.js/testing"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ngx-pub-sub/**/*.ts",
+          "libs/ngx-pub-sub/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
