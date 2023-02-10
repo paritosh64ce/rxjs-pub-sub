@@ -87,6 +87,7 @@ export class NgxPubSubService implements OnDestroy {
 
   ngOnDestroy() {
     for (const eventName in this.eventObservableMapping) {
+      // eslint-disable-next-line no-prototype-builtins
       if (this.eventObservableMapping.hasOwnProperty(eventName)) {
         this.completeObservableAndDestroyMapping(eventName);
       }

@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
+import { Component } from '@angular/core';
+import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ngx-pub-sub-publisher',
   templateUrl: './publisher.component.html',
   styleUrls: ['./publisher.component.css']
 })
-export class PublisherComponent implements OnInit {
+export class PublisherComponent {
 
   normalEvent = 'randomNormal';
   historicalEvent = 'randomHistory';
   latestEvent = 'randomLast';
-  random: number;
+  random: number | undefined;
   list: any[] = [];
   colors = ['primary', 'accent', 'warn'];
   colorCounter = 0;
@@ -32,9 +33,6 @@ export class PublisherComponent implements OnInit {
     this.pubsub.publishEvent(this.normalEvent, this.random);
     this.pubsub.publishWithHistory(this.historicalEvent, this.random);
     this.pubsub.publishWithLast(this.latestEvent, this.random);
-  }
-
-  ngOnInit() {
   }
 
 }

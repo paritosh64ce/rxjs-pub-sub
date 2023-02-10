@@ -9,10 +9,10 @@
     </button>
   </form>
   <div flex>
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip *ngFor="let data of list" [color]="data.myColor" selected>
         {{data.myNumber}}
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
 </mat-card>

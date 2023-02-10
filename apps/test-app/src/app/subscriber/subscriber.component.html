@@ -5,11 +5,11 @@
       <mat-icon *ngIf="!isSubscribed">signal_wifi_off</mat-icon>
     </div>
     <div flex>
-      <mat-chip-list>
+      <mat-chip-listbox>
         <mat-chip *ngFor="let data of list" [color]="data.myColor" selected>
           {{data.myNumber}}
         </mat-chip>
-      </mat-chip-list>
+      </mat-chip-listbox>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
     click was getting fired even for disabled toggle button
    -->
   <mat-button-toggle-group *ngIf="!isSubscribed">
-    <button mat-button (click)="subscribeEvent()">
+    <button mat-raised-button (click)="subscribeEvent()">
       Subscribe to <b>{{eventName}}</b>
     </button>
     <mat-button-toggle disabled>
@@ -28,7 +28,7 @@
     <mat-button-toggle disabled>
       Subscribed to <b>{{eventName}}</b>
     </mat-button-toggle>
-    <button mat-button (click)="unsubscribeEvent()">
+    <button mat-raised-button (click)="unsubscribeEvent()">
       Unsubscribe
     </button>
   </mat-button-toggle-group>

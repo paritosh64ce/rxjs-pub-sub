@@ -1,17 +1,18 @@
-import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { NgxPubSubService } from '@ngx-pub-sub/ngx-pub-sub';
+import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ngx-pub-sub-subscriber',
   templateUrl: './subscriber.component.html',
   styleUrls: ['./subscriber.component.css']
 })
 export class SubscriberComponent {
 
-  @Input() eventName: string;
+  @Input() eventName!: string;
 
-  subscription: Subscription;
+  subscription: Subscription | undefined;
   isSubscribed = false;
   list: any[] = [];
 
@@ -38,7 +39,7 @@ export class SubscriberComponent {
 
   unsubscribeEvent() {
     console.log('unsubscribed');
-    this.subscription.unsubscribe();
+    this.subscription?.unsubscribe();
     this.list = [];
     this.isSubscribed = false;
   }
