@@ -6,20 +6,17 @@
   "prefix": "ngx",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
-      "outputs": ["dist/ngx-pub-sub"],
+      "executor": "@angular-devkit/build-angular:ng-packagr",
       "options": {
+        "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json",
         "project": "libs/ngx-pub-sub/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json"
-        },
-        "development": {
+          "project": "libs/ngx-pub-sub/ng-package.json",
           "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json"
         }
-      },
-      "defaultConfiguration": "production"
+      }
     },
     "test": {
       "executor": "@angular-devkit/build-angular:karma",

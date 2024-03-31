@@ -203,6 +203,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 5.0.0
 > Compatible with Angular 15
 
+> 6.0.0
+> Compatible with Angular 16
+
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 
