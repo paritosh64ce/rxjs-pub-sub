@@ -60,7 +60,7 @@ describe('NgxPubSubService', () => {
   
         myLastValueSubscriber.subscribe({
           next: nextValue => {
-            expect([myDefaultValue, myNewValue].indexOf(nextValue) > -1).toBeTrue();
+            expect([myDefaultValue, myNewValue].indexOf(nextValue) > -1).toBeTruthy();
           }
         });
       }
@@ -80,7 +80,7 @@ describe('NgxPubSubService', () => {
   
         myLastValueSubscriber.subscribe({
           next: nextValue => {
-            expect(myValues.indexOf(nextValue) > -1).toBeTrue();
+            expect(myValues.indexOf(nextValue) > -1).toBeTruthy();
           }
         });
       }

@@ -1,41 +1,36 @@
 {
   "name": "ngx-pub-sub",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "library",
   "sourceRoot": "libs/ngx-pub-sub/src",
-  "prefix": "ngx",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json",
         "project": "libs/ngx-pub-sub/ng-package.json"
       },
       "configurations": {
         "production": {
-          "project": "libs/ngx-pub-sub/ng-package.json",
+          "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.prod.json"
+        },
+        "development": {
           "tsConfig": "libs/ngx-pub-sub/tsconfig.lib.json"
         }
-      }
+      },
+      "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@angular-devkit/build-angular:karma",
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "tsConfig": "libs/ngx-pub-sub/tsconfig.spec.json",
-        "karmaConfig": "libs/ngx-pub-sub/karma.conf.js",
-        "polyfills": ["zone.js", "zone.js/testing"]
+        "jestConfig": "libs/ngx-pub-sub/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ngx-pub-sub/**/*.ts",
-          "libs/ngx-pub-sub/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
-  },
-  "tags": []
+  }
 }

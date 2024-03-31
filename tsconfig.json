@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "typeRoots": ["node_modules/@types"],
-    "paths": {
-      "@pscoped/ngx-pub-sub": ["libs/ngx-pub-sub/src/index.ts"]
-    }
-  },
-  "extends": "./tsconfig.base.json"
-}
