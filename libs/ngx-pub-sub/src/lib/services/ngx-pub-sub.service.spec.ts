@@ -146,12 +146,14 @@ describe('NgxPubSubService', () => {
     }
   ));
   
-  it('should remove the mapping from memory while getting destroyed', inject(
+  it('should remove the mapping from memory when the event is asked to complete', inject(
     [NgxPubSubService],
     (service: NgxPubSubService) => {
-      const myObservable = service.getEventObservable('newEvent');
-      service.ngOnDestroy();
-      // how would you check this? :)
+      service.publishEvent('newEvent');
+      expect(() => service.registerEventWithLastValue('newEvent', 0)).toThrowError();
+      service.completeEvent('newEvent');
+      expect(() => service.getEventObservable('newEvent')).not.toThrowError();
+      service.completeEvent('newEvent');
     }
   ));
 
