@@ -47,6 +47,45 @@ describe('NgxPubSubService', () => {
       expect(() => service.registerEventWithHistory('normalEvent')).toThrowError();
     })));
 
+    it('should publish / subscribe for observables with last value', inject(
+      [NgxPubSubService],
+      (service: NgxPubSubService) => {
+        const myDefaultValue = 123;
+        const eventName = 'eventForLastValue';
+        service.registerEventWithLastValue(eventName, myDefaultValue);
+        
+        const myNewValue = 456;
+        service.publishWithLast(eventName, myNewValue);
+        const myLastValueSubscriber = service.getEventObservable(eventName);
+  
+        myLastValueSubscriber.subscribe({
+          next: nextValue => {
+            expect([myDefaultValue, myNewValue].indexOf(nextValue) > -1).toBeTrue();
+          }
+        });
+      }
+    ));
+    
+    it('should publish / subscribe for observables with historic value', inject(
+      [NgxPubSubService],
+      (service: NgxPubSubService) => {
+        const myValues = [1, 2, 3, 4, 5, 6, 7];
+        const eventName = 'eventForHistory';
+        service.registerEventWithHistory(eventName, 3);
+        
+        service.publishWithHistory(eventName, myValues[0]);
+        service.publishWithHistory(eventName, myValues[1]);
+        service.publishWithHistory(eventName, myValues[2]);
+        const myLastValueSubscriber = service.getEventObservable(eventName);
+  
+        myLastValueSubscriber.subscribe({
+          next: nextValue => {
+            expect(myValues.indexOf(nextValue) > -1).toBeTrue();
+          }
+        });
+      }
+    ));
+    
   //#region older-depricated tests
   it('should create/return Obervable when event name is provided', inject(
     [NgxPubSubService],

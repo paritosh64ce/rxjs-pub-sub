@@ -20,7 +20,8 @@
             "main": "apps/test-app/src/main.ts",
             "polyfills": "apps/test-app/src/polyfills.ts",
             "tsConfig": "apps/test-app/tsconfig.app.json",
-            "aot": false,
+            "buildOptimizer": true,
+            "aot": true,
             "assets": [
               "apps/test-app/src/favicon.ico",
               "apps/test-app/src/assets"
@@ -141,7 +142,9 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "schematicCollections": [
+      "@nrwl/angular"
+    ]
   },
   "schematics": {
     "@nrwl/angular:application": {
@@ -151,6 +154,5 @@
     "@nrwl/angular:library": {
       "unitTestRunner": "karma"
     }
-  },
-  "defaultProject": "ngx-pub-sub"
+  }
 }

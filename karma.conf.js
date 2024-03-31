@@ -5,6 +5,7 @@ const { join } = require('path');
 const { constants } = require('karma');
 
 module.exports = () => {
+  process.env.CHROME_BIN = require('puppeteer').executablePath();
   return {
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],

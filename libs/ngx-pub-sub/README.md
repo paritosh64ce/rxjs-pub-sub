@@ -13,6 +13,13 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![devDependency Status](https://img.shields.io/david/dev/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg#info=devDependencies)
 [![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
+Now supports Angular 16 as well!
+
+| Angular   | @pscoped/ngx-pub-sub  |
+|-----------|-----------------------|
+till 15 | 5.0.0
+16 | 6.0.0
+
 ## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
 
 ## What makes this package special?

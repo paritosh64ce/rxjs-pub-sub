@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,7 +22,7 @@ import { SubscriberComponent } from './subscriber/subscriber.component';
   declarations: [AppComponent, PublisherComponent, SubscriberComponent],
   imports: [
     BrowserModule, BrowserAnimationsModule,
-    FormsModule, FlexLayoutModule,
+    FormsModule,
     MatButtonModule, MatInputModule, MatFormFieldModule,
     MatButtonToggleModule, MatCardModule, MatIconModule,
     MatChipsModule,

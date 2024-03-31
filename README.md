@@ -13,6 +13,13 @@ Event publish - subscribe mechanism as Angular service using Observable. You can
 [![devDependency Status](https://img.shields.io/david/dev/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg#info=devDependencies)
 [![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
+Now supports Angular 16 as well!
+
+| Angular   | @pscoped/ngx-pub-sub  |
+|-----------|-----------------------|
+till 15 | 5.0.0
+16 | 6.0.0
+
 ## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
 
 ## What makes this package special?
@@ -173,7 +180,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## TODO:
 1. Coverage integration with CI
-
+1. Lint integration after Angular 16 upgrade
 
 
 ## Change Log
@@ -194,8 +201,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > Removed deprecation attribute for `getEventObservable`, added funding to `package.json`
 
 > 5.0.0
-> Compatible with Angular 15 (Angular 13+)
+> Compatible with Angular 15
 
+> 6.0.0
+> Compatible with Angular 16
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 
