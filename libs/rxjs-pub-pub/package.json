@@ -1,5 +1,49 @@
 {
   "name": "@pscoped/rxjs-pub-sub",
+  "description": "Event publish - subscribe mechanism as JavaScript library using Observable. You can publish your event along with any data to all the subscribers of your event. This library also supports historical published values for the subscribers.",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "license": "MIT",
+  "author": "Paritosh Patel",
+  "contributors": [
+    {
+      "name": "Paritosh Patel",
+      "email": "13868399+paritosh64ce@users.noreply.github.com",
+      "url": "https://simplyfyingtechblog.wordpress.com"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type" : "individual",
+    "url" : "https://www.paypal.me/paritosh64patel"
+  },
+  "bugs": {
+    "url": "https://github.com/paritosh64ce/ngx-pub-sub/issues"
+  },
+  "homepage": "https://pscoped-ngx-pub-sub-demo.stackblitz.io/",
+  "peerDependencies": {
+    "rxjs": "~7.5.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paritosh64ce/ngx-pub-sub.git"
+  },
+  "keywords": [
+    "javascript",
+    "event",
+    "publish",
+    "subscribe",
+    "pub-sub",
+    "pub-sub-js",
+    "rxjs",
+    "broadcast",
+    "communication",
+    "client communication",
+    "message bus"
+  ]
 }

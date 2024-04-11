@@ -8,7 +8,7 @@
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/rxjs-pub-pub",
+        "outputPath": "dist/rxjs-pub-pub",
         "main": "libs/rxjs-pub-pub/src/index.ts",
         "tsConfig": "libs/rxjs-pub-pub/tsconfig.lib.json",
         "assets": ["libs/rxjs-pub-pub/*.md"]

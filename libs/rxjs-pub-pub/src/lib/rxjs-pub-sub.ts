@@ -84,7 +84,7 @@ class RxjsPubSub {
     this.completeObservableAndDestroyMapping(eventName);
   }
 
-  publishNext(eventName: string, type: SubjectType = SubjectType.Subject, data?: any) {
+  private publishNext(eventName: string, type: SubjectType = SubjectType.Subject, data?: any) {
     this.checkEventType(eventName, type);
     this.eventObservableMapping[eventName].ref.next(data);
   }
