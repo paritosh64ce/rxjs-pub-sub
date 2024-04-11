@@ -11,8 +11,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
-import { NgxPubSubModule } from '@pscoped/ngx-pub-sub';
-
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { PublisherComponent } from './publisher/publisher.component';
@@ -26,7 +24,6 @@ import { SubscriberComponent } from './subscriber/subscriber.component';
     MatButtonModule, MatInputModule, MatFormFieldModule,
     MatButtonToggleModule, MatCardModule, MatIconModule,
     MatChipsModule,
-    NgxPubSubModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' })
   ],
   providers: [],

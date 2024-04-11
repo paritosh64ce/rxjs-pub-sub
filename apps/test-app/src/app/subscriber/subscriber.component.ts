@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
+import { rxjsPubSub } from '@pscoped/rxjs-pub-sub';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -19,12 +19,10 @@ export class SubscriberComponent {
   colors = ['primary', 'accent', 'warn'];
   colorCounter = 0;
 
-  constructor(private pubSub: NgxPubSubService) { }
-
   subscribeEvent() {
 
     console.log('subscribed');
-    this.subscription = this.pubSub.subscribe(this.eventName,
+    this.subscription = rxjsPubSub.subscribe(this.eventName,
       data => {
         this.colorCounter++;
         // append at the top

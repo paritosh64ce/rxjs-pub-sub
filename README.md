@@ -179,8 +179,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## TODO:
+1. Update README for @pscoped/rxjs-pub-sub
+    1. Publish @pscoped/rxjs-pub-sub
+    1. Update the README for @pscoped/ngx-pub-sub, add link to new package, publish
+1. uglify the dist content for publish
 1. Coverage integration with CI
-1. Lint integration after Angular 16 upgrade
+1. Lint integration
 
 
 ## Change Log
