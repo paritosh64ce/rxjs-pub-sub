@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
+import { rxjsPubSub } from '@pscoped/rxjs-pub-sub';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -8,13 +8,13 @@ import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngx-pub-sub Demo App';
+  title = '@pscoped/rxjs-pub-sub Demo App';
   normalEvent = 'randomNormal';
   latestEvent = 'randomLast';
   historicalEvent = 'randomHistory';
 
-  constructor(pubsubSvc: NgxPubSubService) {
-    pubsubSvc.registerEventWithHistory(this.historicalEvent, 6);
-    pubsubSvc.registerEventWithLastValue(this.latestEvent, undefined);
+  constructor() {
+    rxjsPubSub.registerEventWithHistory(this.historicalEvent, 6);
+    rxjsPubSub.registerEventWithLastValue(this.latestEvent, undefined);
   }
 }

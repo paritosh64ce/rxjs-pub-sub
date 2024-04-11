@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxPubSubService } from '@pscoped/ngx-pub-sub';
+import { rxjsPubSub } from '@pscoped/rxjs-pub-sub';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -17,8 +17,6 @@ export class PublisherComponent {
   colors = ['primary', 'accent', 'warn'];
   colorCounter = 0;
 
-  constructor(private pubsub: NgxPubSubService) {}
-
   generateRandom() {
     this.random = Math.floor(Math.random() * 100);
     this.publish();
@@ -30,9 +28,9 @@ export class PublisherComponent {
       myColor: this.colors[this.colorCounter % this.colors.length],
       myNumber: this.random
     });
-    this.pubsub.publishEvent(this.normalEvent, this.random);
-    this.pubsub.publishWithHistory(this.historicalEvent, this.random);
-    this.pubsub.publishWithLast(this.latestEvent, this.random);
+    rxjsPubSub.publishEvent(this.normalEvent, this.random);
+    rxjsPubSub.publishWithHistory(this.historicalEvent, this.random);
+    rxjsPubSub.publishWithLast(this.latestEvent, this.random);
   }
 
 }
