@@ -37,3 +37,4 @@ jobs:
         chrome-version: latest # optional, default is latest
     
     - run: npm run lib:build
+    - run: npm run lib:test
