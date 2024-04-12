@@ -15,7 +15,7 @@ This library can work with any of your JavaScript code. You just need RxJs along
 [![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
 
-## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
+## [Live Demo Link](https://pscoped-rxjs-pub-sub-demo.stackblitz.io)
 
 ## What makes this package special?
 
@@ -23,29 +23,29 @@ This library can work with any of your JavaScript code. You just need RxJs along
 
     - Publish you data
     ```typescript
-    service.publishEvent('eventName', data)
+    rxjsPubSub.publishEvent('eventName', data)
     ```
     - Subscribe to your event
     ```typescript
-    service.subscribe('eventName', (data: any) => { /* your callback */ })
+    rxjsPubSub.subscribe('eventName', (data: any) => { /* your callback */ })
     ```
 
 2. Unique feature
     - This service also supports historical values even for new subscribers.
     ```typescript
-    service.publishWithHistory('eventName', data)   /* new subscribers can have historical values */
-    service.publishWithLast('eventName', data)      /* new subscribers can have last published value */
+    rxjsPubSub.publishWithHistory('eventName', data)   /* new subscribers can have historical values */
+    rxjsPubSub.publishWithLast('eventName', data)      /* new subscribers can have last published values */
     ```
 
 ## How to use
 
-1. Install the module.
+1. Install the package.
 
     ```console
     npm i @pscoped/rxjs-pub-sub --save
     ```
 
-    > I had to scope ( `@pscoped` ) my package with something, because another package having similar name was already published for AngularJS (v 1.x)
+    > I had to scope ( `@pscoped` ) my package with something, because another package having similar name was already published.
 
 2. - Import the service in your project; be it Angular, React, Vue, or even Vanilla JavaScript code
     ``` typescript
@@ -77,12 +77,9 @@ This library can work with any of your JavaScript code. You just need RxJs along
         constructor() { }
 
         ngOnInit() {
-            this.subscription1 = rxjsPubSub.subscribe('randomNormal',
-                                    data => this.myNumber1 = data);
-            this.subscription2 = rxjsPubSub.subscribe('randomHistory',
-                                    data => this.myNumber2 = data);
-            this.subscription3 = rxjsPubSub.subscribe('randomLast',
-                                    data => this.myNumber3 = data);
+            this.subscription1 = rxjsPubSub.subscribe('randomNormal', data => this.myNumber1 = data);
+            this.subscription2 = rxjsPubSub.subscribe('randomHistory', data => this.myNumber2 = data);
+            this.subscription3 = rxjsPubSub.subscribe('randomLast', data => this.myNumber3 = data);
         }
 
         ngOnDestroy() {
@@ -133,6 +130,12 @@ If an event having name 'randomHistory' is registered to support historical valu
 
 ![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
 
+## About the library
+* Motivation: https://www.npmjs.com/package/@pscoped/ngx-pub-sub
+  * This library has been used by many Angular developers.
+  * I wanted to make it available to even broader audience.
+
+
 ## Developing and Contributing
 > The repository also comes with the demo application. Check the Github repo link.
 
@@ -172,8 +175,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Change Log
 
-> 1.0.0 - 1.0.3:  
-> Basic functionality and README file updates
+> 0.0.1 - 1.0.0:  
+> Basic functionality from `@pscoped/ngx-pub-sub` and README file updates
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
 

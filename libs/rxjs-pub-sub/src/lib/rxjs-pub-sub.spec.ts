@@ -66,7 +66,6 @@ describe('rxjsPubSub', () => {
     });
   });
 
-  //#region older-depricated tests
   it('should create/return Obervable when event name is provided', () => {
     const myObservable = rxjsPubSub.getEventObservable('newEvent');
 
@@ -97,7 +96,6 @@ describe('rxjsPubSub', () => {
 
     rxjsPubSub.publishEvent('newEvent', complexObject);
   });
-  //#endregion
 
   it('should stop the observable while completing it', () => {
     const myObservable = rxjsPubSub.getEventObservable('newEvent');
@@ -107,15 +105,23 @@ describe('rxjsPubSub', () => {
     expect((<any>myObservable.source).isStopped).toBe(true);
   });
 
+  it('should create observables even when they are not created using registration or publishing', () => {
+    expect(() => {
+      const newSubscription = rxjsPubSub.subscribe('newEvent', () => { /* do nothing */ });
+      const observable = rxjsPubSub.getEventObservable('newEvent');
+      expect(observable).toBeTruthy();
+    }).not.toThrow();
+  });
+
   it('should throw error if event observable is not created before completing it', () => {
-    expect(() => rxjsPubSub.completeEvent('newEvent')).toThrowError();
+    expect(() => rxjsPubSub.completeEvent('newEvent2')).toThrow();
   });
 
   it('should remove the mapping from memory when the event is asked to complete', () => {
     rxjsPubSub.publishEvent('newEvent');
-    expect(() => rxjsPubSub.registerEventWithLastValue('newEvent', 0)).toThrowError();
+    expect(() => rxjsPubSub.registerEventWithLastValue('newEvent', 0)).toThrow();
     rxjsPubSub.completeEvent('newEvent');
-    expect(() => rxjsPubSub.getEventObservable('newEvent')).not.toThrowError();
+    expect(() => rxjsPubSub.getEventObservable('newEvent')).not.toThrow();
     rxjsPubSub.completeEvent('newEvent');
   });
 

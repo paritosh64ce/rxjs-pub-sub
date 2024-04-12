@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@pscoped/ngx-pub-sub": ["libs/ngx-pub-sub/src/index.ts"],
-      "@pscoped/rxjs-pub-sub": ["libs/rxjs-pub-pub/src/index.ts"]
+      "@pscoped/rxjs-pub-sub": ["libs/rxjs-pub-sub/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
