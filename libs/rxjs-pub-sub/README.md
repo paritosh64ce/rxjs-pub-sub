@@ -3,10 +3,10 @@
 Event publish - subscribe mechanism as Javascript library using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers.
 This library can work with any of your JavaScript code. You just need RxJs along with it. 
 
-[![Build Status](https://github.com/paritosh64ce/ngx-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/ngx-pub-sub/actions/workflows/main.yml)
+[![Build Status](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml)
 [![npm](https://img.shields.io/npm/v/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
-[![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/blob/master/LICENSE)
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
 
 
@@ -118,13 +118,14 @@ This library can work with any of your JavaScript code. You just need RxJs along
 2. Once event name is registered for a type (to support either normal, last value support or historical value support), the same name cannot be used to publish/subscribe for another type unless it is completed by someone.
 3. Normal events need not to be registered. If event is not found at the time of publishing or subscribing, the same will be registered as a normal event.
 4. You can register the events anywhere in your code, however, we recommand to have it at one place only,
-i.e. inside the root component of your application, like what you see in [app.component.ts](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/apps/test-app/src/app/app.component.ts)
+i.e. inside the root component of your application, like what you see in [app.component.ts](https://github.com/paritosh64ce/rxjs-pub-sub/blob/master/apps/test-app/src/app/app.component.ts)
 
 If an event having name 'randomHistory' is registered to support historical values, the same event name cannot be used to register or publish event with other type (i.e. last value support or normal event) unless it is completed programmatically.
 
 ### Below is how the demo application looks like.
 
-![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/ngx-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "ngx-pub-sub demo screenshot")
+![Demo Screenshot](https://raw.githubusercontent.com/paritosh64ce/rxjs-pub-sub/master/apps/test-app/src/assets/demo-img-2.gif "rxjs-pub-sub demo screenshot")  
+ _@pscoped/ngx-pub-sub or @pscoped/rxjs-pub-sub - both's demo apps are kind of same_
 
 ## About the library
 * Motivation: https://www.npmjs.com/package/@pscoped/ngx-pub-sub
@@ -138,8 +139,8 @@ If an event having name 'randomHistory' is registered to support historical valu
 ### Development server
 
 ```console
-git clone https://github.com/paritosh64ce/ngx-pub-sub.git
-cd ngx-pub-sub
+git clone https://github.com/paritosh64ce/rxjs-pub-sub.git
+cd rxjs-pub-sub
 npm i
 npm start
 ```
@@ -161,11 +162,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## TODO:
-1. Update README for @pscoped/rxjs-pub-sub
-    1. Publish @pscoped/rxjs-pub-sub
-    1. Update the README for @pscoped/ngx-pub-sub, add link to new package, publish
-1. uglify the dist content for publish
-1. Coverage integration with CI
+1. Coverage badge for README
 1. Lint integration
 
 
@@ -174,14 +171,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 0.0.1 - 1.0.0:  
 > Basic functionality from `@pscoped/ngx-pub-sub` and README file updates
 
-### Like this work? [Star this repository](https://github.com/paritosh64ce/ngx-pub-sub/stargazers) on GitHub
+### Like this work? [Star this repository](https://github.com/paritosh64ce/rxjs-pub-sub/stargazers) on GitHub
 
 ### Support
 [![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/paritosh64patel)
 
 Motivate, Become a sponsor and get your logo on README with a link to your site. [Become a sponsor](https://simplifyingtechblog.wordpress.com/contact/)
 
-### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/ngx-pub-sub/issues)!
+### Got any issue or some feature request on your mind? Post it [here](https://github.com/paritosh64ce/rxjs-pub-sub/issues)!
 
 ## License
 
