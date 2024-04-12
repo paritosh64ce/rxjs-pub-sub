@@ -3,16 +3,12 @@
 Event publish - subscribe mechanism as Javascript library using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers.
 This library can work with any of your JavaScript code. You just need RxJs along with it. 
 
-[![Build Status](https://travis-ci.com/paritosh64ce/ngx-pub-sub.svg?branch=master)](https://travis-ci.com/paritosh64ce/ngx-pub-sub)
+[![Build Status](https://github.com/paritosh64ce/ngx-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/ngx-pub-sub/actions/workflows/main.yml)
 [![npm](https://img.shields.io/npm/v/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
 [![npm](https://img.shields.io/github/license/paritosh64ce/ngx-pub-sub.svg)](https://github.com/paritosh64ce/ngx-pub-sub/blob/master/LICENSE)
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
 
-
-[![Dependency Status](https://img.shields.io/david/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg)
-[![devDependency Status](https://img.shields.io/david/dev/paritosh64ce/ngx-pub-sub.svg)](https://david-dm.org/paritosh64ce/ngx-pub-sub.svg#info=devDependencies)
-[![codecov](https://codecov.io/gh/paritosh64ce/ngx-pub-sub/branch/master/graph/badge.svg)](https://codecov.io/gh/paritosh64ce/ngx-pub-sub)
 
 
 ## [Live Demo Link](https://pscoped-rxjs-pub-sub-demo.stackblitz.io)
