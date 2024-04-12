@@ -20,6 +20,11 @@ Now supports Angular 16 as well!
 till 15 | 5.0.0
 16 | 6.0.0
 
+## Note:
+* Please migrate to [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) - which is JavaScript framework agnostic. You would just have to update imports; rest all the things (functions names, signatures, types, observables, etc.) would remain the same.
+* The current package just supports Angular; while [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) supports all JavaScript framework like React, Angular, Vue, etc.
+* Going ahead, [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) would be provided further support.
+
 ## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
 
 ## What makes this package special?
@@ -176,10 +181,6 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 > Make sure to update the tests if you submit a PR, the CI will be affected if any of the tests fails.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
-
-
-## TODO:
-1. Coverage integration with CI
 
 
 
