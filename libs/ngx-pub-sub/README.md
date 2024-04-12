@@ -1,5 +1,12 @@
 # 🔔 NgxPubSub 🔔
 
+## Note:
+* Please migrate to [`@pscoped/rxjs-pub-sub`](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub). You would just have to update imports; rest all the things (functions names, signatures, types, observables, etc.) would remain the same.
+* The current package just supports Angular; while [`@pscoped/rxjs-pub-sub`](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub) is JavaScript framework agnostic. It supports all JavaScript framework like React, Angular, Vue, etc.
+* Going ahead, [`@pscoped/rxjs-pub-sub`](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub) would be provided further support.
+
+---
+
 Event publish - subscribe mechanism as Angular service using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers. 
 
 [![Build Status](https://travis-ci.com/paritosh64ce/ngx-pub-sub.svg?branch=master)](https://travis-ci.com/paritosh64ce/ngx-pub-sub)
@@ -19,11 +26,6 @@ Now supports Angular 16 as well!
 |-----------|-----------------------|
 till 15 | 5.0.0
 16 | 6.0.0
-
-## Note:
-* Please migrate to [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) - which is JavaScript framework agnostic. You would just have to update imports; rest all the things (functions names, signatures, types, observables, etc.) would remain the same.
-* The current package just supports Angular; while [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) supports all JavaScript framework like React, Angular, Vue, etc.
-* Going ahead, [`@pscoped/rxjs-pub-sub`](/package/@pscoped/rxjs-pub-sub) would be provided further support.
 
 ## [Live Demo Link](https://pscoped-ngx-pub-sub-demo.stackblitz.io/)
 
