@@ -3,11 +3,13 @@
 Event publish - subscribe mechanism as Javascript library using Observable. You can publish your event along with any data to all the subscribers of your event (event identification is being done using event-name as string). This library also supports historical published values for the new subscribers.
 This library can work with any of your JavaScript code. You just need RxJs along with it. 
 
-[![Build Status](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml)
 [![npm](https://img.shields.io/npm/v/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
 [![npm](https://img.shields.io/npm/dt/@pscoped/rxjs-pub-sub.svg)](https://www.npmjs.com/package/@pscoped/rxjs-pub-sub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/blob/master/LICENSE)
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
+
+[![Build Status](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml)
+[![Static Badge](https://img.shields.io/badge/Coverage-98.18%25-brightgreen)](https://github.com/paritosh64ce/rxjs-pub-sub/coverage/rxjs-pub-sub/)
 
 
 
@@ -107,7 +109,7 @@ This library can work with any of your JavaScript code. You just need RxJs along
         }
     }
     ```
-> Note: Just for example here Angular code is show. However, you could use this library with any of your Javascript project (React, Vue, etc).
+> Note: Here Angular code is shown just for the sake of an example. You could use this library with any of your Javascript project (React, Vue, etc) including vanilla JavaScript and TypeScript.
 
 
 ## Ground Rules
@@ -168,7 +170,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Change Log
 
-> 0.0.1 - 1.0.0:  
+> 0.0.1 - 1.0.1:  
 > Basic functionality from `@pscoped/ngx-pub-sub` and README file updates
 
 ### Like this work? [Star this repository](https://github.com/paritosh64ce/rxjs-pub-sub/stargazers) on GitHub
