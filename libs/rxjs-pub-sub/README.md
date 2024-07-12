@@ -9,7 +9,7 @@ This library can work with any of your JavaScript code. You just need RxJs along
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/paritosh64patel)
 
 [![Build Status](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml/badge.svg)](https://github.com/paritosh64ce/rxjs-pub-sub/actions/workflows/main.yml)
-[![Static Badge](https://img.shields.io/badge/Coverage-98.18%25-brightgreen)](https://github.com/paritosh64ce/rxjs-pub-sub/coverage/rxjs-pub-sub/)
+[![Static Badge](https://img.shields.io/badge/Coverage-98.18%25-brightgreen)](https://github.com/paritosh64ce/rxjs-pub-sub/blob/master/coverage/rxjs-pub-sub/index.html)
 
 
 
